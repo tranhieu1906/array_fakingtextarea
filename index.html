@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form name="f">
+    <textarea name="txt" cols="40" rows="10" onkeydown="typeTextarea();"></textarea>
+</form>
+<script>
+    function typeTextarea(){
+        let value = document.f.txt.value
+        let arr = []
+        let str = ""
+        arr[1]='T';arr[2]='Ô';arr[3]='I';arr[4]=' ';arr[5]='L';arr[6]='À';arr[7]=' ';arr[8]='M';arr[9]='Ộ';arr[10]='T';arr[11]=' ';arr[12]='Đ';arr[13]='Ứ';arr[14]='A';arr[15]=' ';arr[16]='N';arr[17]='G';arr[18]='Ố';arr[19]='C';arr[20]='!';arr[21]='!';arr[22]='!';
+        if (value.length > 0){
+            for (let i = 1 ; i <= value.length ; i++){
+                str = str + arr[i]
+                if (value.length == 23){
+                    str = ""
+                }
+            }
+        }
+        document.f.txt.value = str;
+
+    }
+</script>
+</body>
+</html>
